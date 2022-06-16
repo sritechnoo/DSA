@@ -48,6 +48,62 @@ namespace DSA.LeetCode.Matrix._73SetMatrixZeroes
             int rowLength = matrix.Length;
             int colLength = matrix[0].Length;
 
+            bool isFirstRowZero = false;
+            bool isFirstColZero = false;
+
+            for (int r = 0; r < rowLength; r++)
+            {
+                if (matrix[r][0] == 0) { isFirstColZero = true; break; }
+            }
+            for (int c = 0; c < colLength; c++)
+            {
+                if (matrix[0][c] == 0) { isFirstRowZero = true; break; }
+            }
+            for (int r = 0; r < rowLength; r++)
+            {
+                for (int c = 0; c < colLength; c++)
+                {
+                    if (matrix[r][c] == 0)
+                    {
+                        matrix[0][c] = 0;
+                        matrix[r][0] = 0;
+                    }
+                }
+            }
+
+
+            for (int r = 1; r < rowLength; r++)
+            {
+                for (int c = 1; c < colLength; c++)
+                {
+                    if (matrix[0][c] == 0 || matrix[r][0] == 0)
+                    {
+                        matrix[r][c] = 0;
+                    }
+                }
+            }
+            if (isFirstColZero == true)
+            {
+                for (int r = 0; r < rowLength; r++)
+                {
+                    matrix[r][0] = 0;
+                }
+
+            }
+            if (isFirstRowZero == true)
+            {
+                for (int c = 0; c < colLength; c++)
+                {
+                    matrix[0][c] = 0;
+                }
+            }
+        }
+
+        public void SetZeroesApproach1(int[][] matrix)
+        {
+            int rowLength = matrix.Length;
+            int colLength = matrix[0].Length;
+
             HashSet<int> zeroRows = new HashSet<int>();
             HashSet<int> zeroCols = new HashSet<int>();
             for (int r = 0; r < rowLength; r++)
@@ -72,7 +128,6 @@ namespace DSA.LeetCode.Matrix._73SetMatrixZeroes
                     }
                 }
             }
-
         }
     }
 }
