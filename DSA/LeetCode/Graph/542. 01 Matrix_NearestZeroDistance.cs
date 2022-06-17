@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace DSA.LeetCode.Graph._54201_Matrix_NearestZeroDistance
+namespace DSA.LeetCode.Graph._542_01_Matrix_NearestZeroDistance
 {
     public class Solution
     {
