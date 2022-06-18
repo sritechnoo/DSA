@@ -48,7 +48,7 @@ namespace DSA.LeetCode.Graph.Course_Schedule
             return orderList.Count == numCourses;
         }
 
-        private (List<int>, Dictionary<int, HashSet<int>>) TopologicalSortingBFS(int numCourses, int[][] prerequisites, int[][] queries)
+        private (List<int>, Dictionary<int, HashSet<int>>) TopologicalSortingBFS(int numCourses, int[][] prerequisites)
         {
             Dictionary<int, List<int>> adjList = new Dictionary<int, List<int>>();
             int[] inDegree = new int[numCourses];

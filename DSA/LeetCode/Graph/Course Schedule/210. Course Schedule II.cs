@@ -49,13 +49,13 @@ namespace DSA.LeetCode.Graph.Course_Schedule._210_Course_Schedule_II
     {
         public int[] FindOrder(int numCourses, int[][] prerequisites)
         {
-            
+
             var result = TopologicalSortingBFS(numCourses, prerequisites);
             var orderList = result.Item1;
             return orderList.Count == numCourses ? orderList.ToArray() : new List<int>().ToArray();
         }
 
-        private (List<int>, Dictionary<int, HashSet<int>>) TopologicalSortingBFS(int numCourses, int[][] prerequisites, int[][] queries)
+        private (List<int>, Dictionary<int, HashSet<int>>) TopologicalSortingBFS(int numCourses, int[][] prerequisites)
         {
             Dictionary<int, List<int>> adjList = new Dictionary<int, List<int>>();
             int[] inDegree = new int[numCourses];
