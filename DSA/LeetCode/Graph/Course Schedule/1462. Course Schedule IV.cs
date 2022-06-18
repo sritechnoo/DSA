@@ -81,9 +81,8 @@ namespace DSA.LeetCode.Graph.Course_Schedule._1462CourseSchedule_IV
 
 
             /*Initialization*/
-            for (int i = 0; i < numCourses; i++)
+            for (int node = 0; node < numCourses; node++)
             {
-                int node = i;
                 adjList.Add(node, new List<int>());
                 inDegree[node] = 0;
 
