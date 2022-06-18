@@ -34,10 +34,32 @@ namespace DSA
             //var result =new DSA.LeetCode.Permutations._60_PermutationSequence.Solution().GetPermutation(n: 4, k: 9);
             //Console.WriteLine(result);
 
-            string s = "a1b2";
-            var result = new DSA.LeetCode.Permutations._784_LetterCasePermutation.Solution().LetterCasePermutation(s: s);
-            Console.WriteLine(result);
+            //string s = "a1b2";
+            //var result = new LeetCode.Permutations._784_LetterCasePermutation.Solution().LetterCasePermutation(s: s);
+            //Console.WriteLine(result);
 
+            int numCourses = 4;
+            int[][] prerequisites = new int[][]
+            {
+                new int[] { 1, 0 },
+                new int[] { 2, 0 },
+                new int[] { 3, 1 },
+                new int[] { 3, 2 },
+            };
+
+            //int numCourses = 2;
+            //int[][] prerequisites = new int[numCourses][];
+
+            //int numCourses = 3;
+            //int[][] prerequisites = new int[][]
+            //{
+            //    new int[] { 1, 0 },
+            //    new int[] { 1, 2 },
+            //    new int[] { 0, 1 }
+            //};
+
+            var result = new LeetCode.Graph.Course_Schedule._210_Course_Schedule_II.Solution().FindOrder(numCourses: numCourses, prerequisites: prerequisites);
+            Console.WriteLine(result);
 
             Console.WriteLine("Hello World");
         }

@@ -20,11 +20,15 @@ namespace DSA.LeetCode.Graph._743NetworkDelayTime
 
             foreach (var edge in times)
             {
-                if (adjList.ContainsKey(edge[0]) == false)
+                int u = edge[0];
+                int v = edge[1];
+                int wt = edge[2];
+
+                if (adjList.ContainsKey(u) == false)
                 {
-                    adjList.Add(edge[0], new List<(int, int)>());
+                    adjList.Add(u, new List<(int, int)>());
                 }
-                adjList[edge[0]].Add((edge[1], edge[2]));
+                adjList[u].Add((v, wt));
             }
 
             int[] distance = new int[n + 1];
@@ -99,14 +103,14 @@ namespace DSA.LeetCode.Graph._743NetworkDelayTime
 
         private void Dijikstra(int n, Dictionary<int, List<(int, int)>> adjList, int[] distance, int src)
         {
-            PriorityQueue<int, int> pq = new PriorityQueue<int, int>();
+            PriorityQueue<int, int> minHeap = new PriorityQueue<int, int>();
 
             distance[src] = 0;
-            pq.Enqueue(src, 0);
+            minHeap.Enqueue(src, 0);
 
-            while (pq.Count > 0)
+            while (minHeap.Count > 0)
             {
-                pq.TryDequeue(out int u, out int uTime);
+                minHeap.TryDequeue(out int u, out int uTime);
 
                 if (uTime > distance[u])
                 {
@@ -127,7 +131,7 @@ namespace DSA.LeetCode.Graph._743NetworkDelayTime
                     {
                         distance[v] = uTime + vtime;
 
-                        pq.Enqueue(v, distance[v]);
+                        minHeap.Enqueue(v, distance[v]);
                     }
                 }
             }
