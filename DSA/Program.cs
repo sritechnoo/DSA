@@ -38,14 +38,14 @@ namespace DSA
             //var result = new LeetCode.Permutations._784_LetterCasePermutation.Solution().LetterCasePermutation(s: s);
             //Console.WriteLine(result);
 
-            int numCourses = 4;
-            int[][] prerequisites = new int[][]
-            {
-                new int[] { 1, 0 },
-                new int[] { 2, 0 },
-                new int[] { 3, 1 },
-                new int[] { 3, 2 },
-            };
+            //int numCourses = 4;
+            //int[][] prerequisites = new int[][]
+            //{
+            //    new int[] { 1, 0 },
+            //    new int[] { 2, 0 },
+            //    new int[] { 3, 1 },
+            //    new int[] { 3, 2 },
+            //};
 
             //int numCourses = 2;
             //int[][] prerequisites = new int[numCourses][];
@@ -58,8 +58,19 @@ namespace DSA
             //    new int[] { 0, 1 }
             //};
 
-            var result = new LeetCode.Graph.Course_Schedule._210_Course_Schedule_II.Solution().FindOrder(numCourses: numCourses, prerequisites: prerequisites);
-            Console.WriteLine(result);
+            //var result = new LeetCode.Graph.Course_Schedule._210_Course_Schedule_II.Solution().FindOrder(numCourses: numCourses, prerequisites: prerequisites);
+            //Console.WriteLine(result);
+
+            //int[] nums1 = new int[] { 1, 7, 11 };
+            //int[] nums2 = new int[] { 2, 4, 6 };
+            //int k = 3;
+            //var result = new LeetCode.PriorityQueue._373_Find_K_Pairs_with_Smallest_Sums.Solution().KSmallestPairs(nums1: nums1, nums2: nums2, k: k);
+            //Console.WriteLine(result);
+
+            int[] nums = new int[] { 4, 2, 3 };
+            int k = 3;
+            var result = new LeetCode.PriorityQueue._1005_Maximize_Sum_Of_Array_After_K_Negations.Solution().LargestSumAfterKNegations(nums: nums, k: k);
+
 
             Console.WriteLine("Hello World");
         }
