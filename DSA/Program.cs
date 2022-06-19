@@ -41,7 +41,7 @@ namespace DSA
             //int numCourses = 4;
             //int[][] prerequisites = new int[][]
             //{
-            //    new int[] { 1, 0 },
+            //    new int[] { 1, 0 },   
             //    new int[] { 2, 0 },
             //    new int[] { 3, 1 },
             //    new int[] { 3, 2 },
@@ -67,10 +67,29 @@ namespace DSA
             //var result = new LeetCode.PriorityQueue._373_Find_K_Pairs_with_Smallest_Sums.Solution().KSmallestPairs(nums1: nums1, nums2: nums2, k: k);
             //Console.WriteLine(result);
 
-            int[] nums = new int[] { 4, 2, 3 };
-            int k = 3;
-            var result = new LeetCode.PriorityQueue._1005_Maximize_Sum_Of_Array_After_K_Negations.Solution().LargestSumAfterKNegations(nums: nums, k: k);
+            //int[] nums = new int[] { 4, 2, 3 };
+            //int k = 3;
+            //var result = new LeetCode.PriorityQueue._1005_Maximize_Sum_Of_Array_After_K_Negations.Solution().LargestSumAfterKNegations(nums: nums, k: k);
 
+            //int[][] points = new int[][]
+            //{
+            //    new int[] { 3, 3 },
+            //    new int[] { 5, -1 },
+            //    new int[] { -2, 4 }
+            //};
+            //int k = 2;
+            //var result = new DSA.LeetCode.PriorityQueue._973_K_Closest_Points_to_Origin.Solution().KClosest(points: points, k: k);
+
+
+            int[][] mat = new int[][]
+            {
+                    new int[] { 1,10,10 },
+                    new int[] { 1,4,5  },
+                    new int[] { 2, 3, 6 }
+            };
+            int k = 7;
+            var result = new DSA.LeetCode.PriorityQueue._1439_Find_the_Kth_Smallest_Sum_of_a_Matrix_With_Sorted_Rows.Solution().KthSmallest(mat: mat, k: k);
+            Console.WriteLine(result);
 
             Console.WriteLine("Hello World");
         }
