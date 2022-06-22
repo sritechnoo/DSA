@@ -76,6 +76,41 @@ namespace DSA.LeetCode.Arrays.Find_the_repeating_and_missing_numbers
             return new int[] { repeating, misssing };
         }
 
+        public int[] Find_missing_repeating_Negative_Marking(int[] arr, int size)
+        {
+            /*Approach: 
+                Traverse the array. While traversing, use the absolute value of every element as an index and 
+                make the value at this index as negative to mark it visited. 
+                If something is already marked negative then this is the repeating element. 
+            
+                To find missing, traverse the array again and look for a positive value.*/
+
+
+            Console.Write("Duplicate Number");
+            int duplicate_Or_Repeating_Number = -1;
+            for (int i = 0; i < size; i++)
+            {
+                int abs_val = Math.Abs(arr[i]);
+                if (arr[abs_val - 1] > 0)
+                    arr[abs_val - 1] = -arr[abs_val - 1];
+                else
+                    duplicate_Or_Repeating_Number = abs_val;
+            }
+
+            Console.Write("For Missing Number");
+            int missing_number = -1;
+            for (int i = 0; i < size; i++)
+            {
+                if (arr[i] > 0)
+                {
+                    missing_number = i + 1; /* Here +1 is for zero based indexing */
+                    break;
+                }
+            }
+
+            return new int[] { duplicate_Or_Repeating_Number, missing_number };
+        }
+
         public void Find_missing_repeating_BitManipulation(int[] arr, int n)
         {
             /* Will hold xor of all elements
