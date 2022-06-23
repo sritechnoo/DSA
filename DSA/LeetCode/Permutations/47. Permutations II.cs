@@ -56,12 +56,12 @@ namespace DSA.LeetCode.Permutations._47_PermutationsII
             {
                 result.Add(new List<int>(ds));
             }
-
+            
             for (int ind = 0; ind < nums.Length; ind++)
             {
                 if (map[ind] == true) { continue; }
 
-                if (ind > 0 && nums[ind] == nums[ind - 1] && !map[ind - 1]) { continue; }
+                if (ind > 0 && nums[ind - 1] == nums[ind] && !map[ind - 1]) { continue; }
 
                 map[ind] = true;
                 ds.Add(nums[ind]);
