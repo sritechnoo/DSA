@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace DSA.LeetCode.DP._688KnightProbabilityinChessboard
+namespace DSA.LeetCode.DP.Grid._688_Knight_Probability_in_Chessboard
 {
     public class Solution
     {

@@ -54,7 +54,8 @@ namespace DSA.LeetCode.DP.TimePeriod._1654.Minimum_Jumps_to_Reach_Home
         public int MinimumJumps(int[] forbidden, int a, int b, int x)
         {
 
-            return DFS(0, false, forbidden, a, b, x);
+            //return DFS(0, false, forbidden, a, b, x);
+            return BFS(forbidden, a, b, x);
         }
 
         private int DFS(int ind, bool isLastStepIsBack, int[] forbidden, int fwdStep, int backwardstep, int target)
@@ -78,6 +79,45 @@ namespace DSA.LeetCode.DP.TimePeriod._1654.Minimum_Jumps_to_Reach_Home
             }
 
             return result;
+        }
+
+
+        private int BFS(int[] forbidden, int a, int b, int x)
+        {
+            int maxReachLimit = 2000 + a + b;
+
+            var forbiddenSet = new HashSet<int>(forbidden);
+            var visitedSet = new HashSet<(int, bool)>();
+
+            var queue = new Queue<(int Pos, bool IsBackward)>();
+
+            queue.Enqueue((0, false));
+
+            int totalSteps = 0;
+            while (queue.Count > 0)
+            {
+                int count = queue.Count;
+
+                while (count-- > 0)
+                {
+                    var cur = queue.Dequeue();
+
+                    if (cur.Pos == x) return totalSteps;
+
+                    if (forbiddenSet.Contains(cur.Pos) || visitedSet.Contains(cur)) continue;
+
+                    visitedSet.Add(cur);
+
+                    if (cur.Pos + a <= maxReachLimit)
+                        queue.Enqueue((cur.Pos + a, false));
+
+                    if (cur.Pos - b >= 0 && !cur.IsBackward)
+                        queue.Enqueue((cur.Pos - b, true));
+                }
+                totalSteps++;
+            }
+
+            return -1;
         }
     }
 }
