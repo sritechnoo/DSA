@@ -11,7 +11,7 @@ namespace DSA.LeetCode.DP.KadaneAlgorithm
     by using the maximum sum subarray ending at the previous position.*/
     public class KadaneAlgorithmApproach
     {
-        private int MaxSubarraySumTabulation(int[] nums)
+        public int MaxSubarraySumTabulation(int[] nums)
         {
             int[] currSum = new int[nums.Length];
             currSum[0] = nums[0];
@@ -25,18 +25,19 @@ namespace DSA.LeetCode.DP.KadaneAlgorithm
             return maxi;
         }
 
-        private int MaxSubarraySumSpace(int[] nums)
+        public int MaxSubarraySumSpace(int[] nums)
         {
 
-            int maxi = nums[0];
+            int maxiSum = nums[0];
 
             int currSum = nums[0];
             for (int i = 1; i < nums.Length; i++)
             {
                 currSum = Math.Max(currSum + nums[i], nums[i]);
-                maxi = Math.Max(currSum, maxi);
+                maxiSum = Math.Max(currSum, maxiSum);
             }
-            return maxi;
+
+            return maxiSum;
         }
     }
 }
