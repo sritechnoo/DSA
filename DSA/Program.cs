@@ -76,15 +76,32 @@ namespace DSA
             //Console.WriteLine(result);
 
 
-            int[] nums1 = new int[] { 1, 2, 3, 0, 0, 0 };
-            int m = 3;
+            //int[] nums1 = new int[] { 1, 2, 3, 0, 0, 0 };
+            //int m = 3;
 
-            int[] nums2 = new int[] { 2, 5, 6 };
-            int n = 3;
+            //int[] nums2 = new int[] { 2, 5, 6 };
+            //int n = 3;
 
-            new LeetCode.Arrays._88_Merge_Sorted_Array.Solution().Merge(nums1, m, nums2, n);
+            //new LeetCode.Arrays._88_Merge_Sorted_Array.Solution().Merge(nums1, m, nums2, n);
 
 
+            //var result = new LeetCode.DP._91_Decode_Ways.Solution().NumDecodings(s: "12");
+            //Console.WriteLine(result);
+
+            //int[] coins = new int[] { 1, 2, 5 };
+            //int amount = 11;
+            //var result = new LeetCode.DP.Subsequences._322_Coin_Change.Solution().CoinChange(coins: coins, amount: amount);
+            //Console.WriteLine(result);
+
+            int[][] grid = new int[][]
+            {
+                new int[] { 2,0,0,1 },
+                new int[] { 0,3,1,0 },
+                new int[] { 0,5,2,0 },
+                new int[] { 4,0,0,2 },
+            };
+            var result = new LeetCode.Matrix._6101_Check_if_Matrix_Is_X_Matrix.Solution().CheckXMatrix(grid: grid);
+            Console.WriteLine(result);
 
             Console.WriteLine("Hello World");
         }

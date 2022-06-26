@@ -122,11 +122,6 @@ namespace DSA.LeetCode.Arrays.Count_Inversions_in_an_array
             return inv_count;
         }
 
-        // Driver method to test the above function
-        public static void Main()
-        {
-            int[] arr = new int[] { 1, 20, 6, 4, 5 };
-            Console.Write("Number of inversions are " + mergeSort(arr, 5));
-        }
+         
     }
 }
