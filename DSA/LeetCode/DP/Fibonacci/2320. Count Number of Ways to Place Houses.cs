@@ -28,7 +28,7 @@ namespace DSA.LeetCode.DP.Fibonacci._2320_Count_Number_of_Ways_to_Place_Houses
 
     public class Solution
     {
-        private long MOD = 1000000007;
+        private const long MOD = 1000000007;
         public int CountHousePlacements(int n)
         {
             Dictionary<string, long> dp = new Dictionary<string, long>();
