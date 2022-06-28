@@ -25,17 +25,17 @@ namespace DSA.LeetCode.Arrays.Count_Inversions_in_an_array
     Explanation: Given array has two inversions:
     (3, 1), (3, 2) */
 
-    class Solution
+   public class Solution
     {
         public int GetInvCount(int[] arr, int n)
         {
-            int inv_count = 0;
+            int pairsCount = 0;
 
             for (int i = 0; i < n - 1; i++)
                 for (int j = i + 1; j < n; j++)
-                    if (arr[i] > arr[j]) { inv_count++; }
+                    if (arr[i] > arr[j]) { pairsCount++; }
 
-            return inv_count;
+            return pairsCount;
         }
     }
 
@@ -122,6 +122,6 @@ namespace DSA.LeetCode.Arrays.Count_Inversions_in_an_array
             return inv_count;
         }
 
-         
+
     }
 }

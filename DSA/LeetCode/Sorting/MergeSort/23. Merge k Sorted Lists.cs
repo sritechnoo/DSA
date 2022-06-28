@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DSA.LeetCode.DivideAndConquer._23_Merge_k_Sorted_Lists
+namespace DSA.LeetCode.Sorting.MergeSort._23_Merge_k_Sorted_Lists
 {
     /*You are given an array of k linked-lists lists, each linked-list is sorted in ascending order.
 

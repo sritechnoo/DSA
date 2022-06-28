@@ -93,15 +93,24 @@ namespace DSA
             //var result = new LeetCode.DP.Subsequences._322_Coin_Change.Solution().CoinChange(coins: coins, amount: amount);
             //Console.WriteLine(result);
 
-            int[][] grid = new int[][]
-            {
-                new int[] { 2,0,0,1 },
-                new int[] { 0,3,1,0 },
-                new int[] { 0,5,2,0 },
-                new int[] { 4,0,0,2 },
-            };
-            var result = new LeetCode.Matrix._6101_Check_if_Matrix_Is_X_Matrix.Solution().CheckXMatrix(grid: grid);
+            //int[][] grid = new int[][]
+            //{
+            //    new int[] { 2,0,0,1 },
+            //    new int[] { 0,3,1,0 },
+            //    new int[] { 0,5,2,0 },
+            //    new int[] { 4,0,0,2 },
+            //};
+            //var result = new LeetCode.Matrix._6101_Check_if_Matrix_Is_X_Matrix.Solution().CheckXMatrix(grid: grid);
+            //Console.WriteLine(result);
+
+
+            int[] nums = new int[] { 5, 2, 3, 1 };
+            var result = new DSA.LeetCode.Sorting.MergeSort._912_Sort_an_Array.Solution().SortArray(nums:nums);
             Console.WriteLine(result);
+
+
+
+
 
             Console.WriteLine("Hello World");
         }

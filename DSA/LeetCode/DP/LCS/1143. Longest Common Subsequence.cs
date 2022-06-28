@@ -50,31 +50,31 @@ namespace DSA.LeetCode.DP.LCS._1143_Longest_Common_Subsequence
             int[][] dp = new int[text1.Length][];
             for (int row = 0; row < text1.Length; row++)
             {
-                dp[row] = new int[][text2.Length];
+                dp[row] = new int[text2.Length];
                 Array.Fill(dp[row], -1);
             }
 
-            int result = LCSDFS(0, 0, text1, text2);
+            int result = LCSDFS(0, 0, text1, text2, dp);
             return result;
         }
 
-        private int LCSDFS(int ind1, int ind2, string text1, string text2)
+        private int LCSDFS(int ind1, int ind2, string text1, string text2, int[][] dp)
         {
             if (ind1 < 0 || ind2 < 0) return 0;
 
-            if (DP[ind1][ind2] != -1) { return dp[ind1][ind2]; }
+            if (dp[ind1][ind2] != -1) { return dp[ind1][ind2]; }
 
             if (text1[ind1] == text2[ind2])
             {
-                return 1 + LCSDFS(ind1 - 1, ind2 - 1, text1, text2);
+                return 1 + LCSDFS(ind1 - 1, ind2 - 1, text1, text2, dp);
 
             }
             else
             {
-                var s1Take_s2NotTake = LCSDFS(ind1, ind2 - 1, text1, text2);
-                var s2Take_s1NotTake = LCSDFS(ind1 - 1, ind2, text1, text2);
+                var s1Take_s2NotTake = LCSDFS(ind1, ind2 - 1, text1, text2, dp);
+                var s2Take_s1NotTake = LCSDFS(ind1 - 1, ind2, text1, text2, dp);
                 return dp[ind1][ind2] = Math.Max(s1Take_s2NotTake, s2Take_s1NotTake);
-
             }
         }
     }
+}
