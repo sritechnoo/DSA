@@ -67,7 +67,6 @@ namespace DSA.LeetCode.DP.LIS._300LongestIncreasingSubsequence
 
             //curr_index = lengthOfNum-1 to 0
             //prev_index = curr_index-1 to 0
-
             for (int curr_index = lengthOfNum - 1; curr_index >= 0; curr_index--)
             {
                 for (int prev_index = curr_index - 1; prev_index >= 0; prev_index--)
