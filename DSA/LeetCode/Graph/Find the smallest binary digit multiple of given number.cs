@@ -14,8 +14,7 @@ namespace DSA.LeetCode.Graph
         public static int mod(String t, int N)
         {
             int r = 0;
-            for (int i = 0;
-                    i < t.Length; i++)
+            for (int i = 0; i < t.Length; i++)
             {
                 r = r * 10 + (t[i] - '0');
                 r %= N;

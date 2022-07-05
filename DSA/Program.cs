@@ -104,13 +104,32 @@ namespace DSA
             //Console.WriteLine(result);
 
 
-            int[] nums = new int[] { 5, 2, 3, 1 };
-            var result = new DSA.LeetCode.Sorting.MergeSort._912_Sort_an_Array.Solution().SortArray(nums:nums);
+            //int[] nums = new int[] { 5, 2, 3, 1 };
+            //var result = new DSA.LeetCode.Sorting.MergeSort._912_Sort_an_Array.Solution().SortArray(nums:nums);
+            //Console.WriteLine(result);
+
+
+            //int[] nums = new int[] { 1, 2, 3, 4, 5 };
+            //int s = 5;
+            //var result = new DSA.LeetCode.Arrays._Pair_Sum.Solution().PairSum(arr: nums, s: s);
+            //Console.WriteLine(result);
+
+            //int[] nums = new int[] { 3, 2, 4 };
+            //int target = 6;
+            //var result = new DSA.LeetCode.Arrays._1_Two_Sum.Solution().TwoSum(nums: nums, target: target);
+            //Console.WriteLine(result);
+
+
+            //int[] nums = new int[] { -1, 0, 1, 2, -1, -4 };
+            //var result = new DSA.LeetCode.Arrays._15_3Sum.Solution().ThreeSum(nums: nums);
+            //Console.WriteLine(result);
+
+
+
+            int[] nums = new int[] { 1000000000, 1000000000, 1000000000, 1000000000 };
+            int target = -294967296;
+            var result = new DSA.LeetCode.Arrays._18_4Sum.Solution().FourSum(nums: nums, target: target);
             Console.WriteLine(result);
-
-
-
-
 
             Console.WriteLine("Hello World");
         }
