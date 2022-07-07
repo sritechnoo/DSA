@@ -14,8 +14,7 @@ namespace DSA.LeetCode.BinaryTree.Find_a_pair_with_given_sum_in_BST
 
     public class Solution
     {
-        static bool DFSInOrder(Node root, int sum,
-                             HashSet<int> set)
+        static bool DFSInOrder(Node root, int sum, HashSet<int> set)
         {
             if (root == null) { return false; }
 
