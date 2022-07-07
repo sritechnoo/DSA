@@ -42,6 +42,32 @@ namespace DSA.LeetCode.SlidingWindow._3LongestSubstringWithoutRepeatingCharacter
     {
         public int LengthOfLongestSubstring(string s)
         {
+            return LengthOfLongestSubstringSlidingWindow(s);
+        }
+
+        public int BruteForce(string s)
+        {
+            int maxi = int.MinValue;
+
+            for (int i = 0; i < s.Length; i++)
+            {
+                HashSet<char> charSet = new HashSet<char>();
+                for (int j = i; j < s.Length; j++)
+                {
+                    char currentChar = s[j];
+                    if (charSet.Contains(currentChar))
+                    {
+                        maxi = Math.Max(maxi, j - i);
+                        break;
+                    }
+                    charSet.Add(currentChar);
+                }
+            }
+            return maxi;
+        }
+
+        public int LengthOfLongestSubstringSlidingWindow(string s)
+        {
             int maxLength = 0;
             HashSet<char> set = new HashSet<char>();
 
@@ -55,8 +81,8 @@ namespace DSA.LeetCode.SlidingWindow._3LongestSubstringWithoutRepeatingCharacter
                     set.Remove(s[windowStart]);
                     windowStart++;
                 }
-                set.Add(currChar);
 
+                set.Add(currChar);
                 maxLength = Math.Max(maxLength, windowEnd - windowStart + 1);
             }
             return maxLength;
