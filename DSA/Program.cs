@@ -125,11 +125,16 @@ namespace DSA
             //Console.WriteLine(result);
 
 
+            //int[] nums = new int[] { 1000000000, 1000000000, 1000000000, 1000000000 };
+            //int target = -294967296;
+            //var result = new DSA.LeetCode.Arrays._18_4Sum.Solution().FourSum(nums: nums, target: target);
+            //Console.WriteLine(result);
 
-            int[] nums = new int[] { 1000000000, 1000000000, 1000000000, 1000000000 };
-            int target = -294967296;
-            var result = new DSA.LeetCode.Arrays._18_4Sum.Solution().FourSum(nums: nums, target: target);
+
+            int[] nums = new int[] { 1, 2, 0, 1 };
+            var result = new DSA.LeetCode.Arrays._128_Longest_Consecutive_Sequence.Solution().LongestConsecutive(nums: nums);
             Console.WriteLine(result);
+ 
 
             Console.WriteLine("Hello World");
         }
