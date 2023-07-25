@@ -131,10 +131,10 @@ namespace DSA
             //Console.WriteLine(result);
 
 
-            // int[] nums = new int[] { 1, 2, 0, 1 };
-            // var result = new DSA.LeetCode.Arrays._128_Longest_Consecutive_Sequence.Solution().LongestConsecutive(nums: nums);
-            // Console.WriteLine(result);
- 
+            int[] nums = new int[] { 1, 2, 0, 1 };
+            var result = new DSA.LeetCode.Arrays._128_Longest_Consecutive_Sequence.Solution().LongestConsecutive(nums: nums);
+            Console.WriteLine(result);
+
 
             Console.WriteLine("Hello World");
         }
